@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,5,[4,5],{a:1,b:2},66];
+        var newData;
+        function qianCopy(data){
+             newData = data.isArray ? [] : {};
+            for(var i in data){
+                newData[i] = data[i];
+            }
+            return newData;
+        };
+        qianCopy(arr);
+        
+            console.log(arr);
+        console.log(newData);
+        
+    </script>
+</body>
+</html>

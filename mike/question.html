@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.设计一个创建矩形的构造函数，属性：宽度和高度，方法：求矩形面积
+        function adds (width,height){
+            this.width = width;
+            this.height = height;
+            this.s = function () {
+                return width * height;
+            }
+        };
+        var p  = new adds(105,105);
+        console.log(p.s());
+        
+        
+
+//         4.设计一个构造函数, 表示平面上的一个圆. 提供三个方法: 
+// 方法1功能是：计算圆的周长
+// 方法2功能是：计算圆的面积
+// 方法3功能是：计算两个圆的圆心之间的距离
+        function circle(x,y,r){
+            this.r = r;
+            this.x = x;
+            this.y = y;
+            this.round = function(){
+                return 2 * Math.PI * r;
+            };
+            this.sss = function(){
+                return Math.pow(r,2)*Math.PI;
+            };
+            this.getH = function(circle){
+                
+            };
+        };
+        var ce = new circle(10,5,5);
+        console.log(ce.sss());
+        
+// 5.定义创建汽车和公路的构造函数
+// 汽车属性：品牌、价格、时速
+// 公路属性：名称、长度
+// 方法：为汽车定义方法，作用是求车跑在路上所用时长
+        // function car (brand,price,speed){
+        //     this.brand = brand;
+        //     this.price = price;
+        //     this.speed = speed;
+        //     this.leng = function (l){
+        //         return l.le / this.speed;
+        //     }
+            
+        // };
+        // function Road (name,le){
+        //         this.name = name;
+        //         this.le = le;
+        //     };
+        // var csr = new car('宝马',4500000,85);
+        // var l = new Road('afs',85000);
+
+        // console.log(csr.leng());
+        
+//         3.构造函数：人、狗
+// 属性：名字（人）、名字（狗）
+// 方法：自我介绍（人）、叫（狗）	
+// 需求：通过相应的构造函数，分别创建3个人，3个狗，放到一个数组中，然后遍历该数组
+// ，在遍历的过程中，判断如果是人,就调用人的自我介绍方法，如果是狗就调用狗的叫方法.
+function Person (name){
+    this.name = name;
+    this.IN = function () {
+        console.log('My name is'+this.name);
+        
+    };
+};
+function Dog (name){
+    this.name = name;
+    this.shout = function () {
+        console.log('汪汪汪');
+        
+    };
+}
+
+var arr = ['ddd','xix','gggg'];
+var arr1 = ['ddd33','xi33x','g33ggg'];
+var em = [];
+for(var i=0;i<3;i++){
+    var person = new Person(arr[i]);
+    em.push(person);
+    var dog = new Dog(arr1[i]);
+    em.push(dog);
+}
+
+for(var i=0 ;i<em.length;i++){
+    if(em[i] instanceof Person){
+        em[i].IN();
+    }else{
+        em[i].shout();
+    }
+}
+
+// 6.设计一个构造函数, 它的对象表示一本书, 每本书包含作者, 出版社, 出版日期.定义两个方法
+// 方法1功能是：显示这个本书的信息
+// 方法2功能是：计算这本书到现在已经出版了多少天
+function Book (author,she,date) {
+    this.author = author;
+    this.date = date;
+    this.she = she;
+    this.shou = function () {
+        console.log(`本书作者是${this.author}`);
+        console.log(`本出版社是${this.she}`);
+        console.log(`本书出版日期是${this.date}`);
+    };
+    this.timer = function () {
+        var date = new Date('2002-11-21');
+        console.log(date);
+        
+    };
+};
+console.log(name in Dog);
+
+var book = new Book ('antus','宏观人民出版社',19991213);
+console.log(book.timer());
+
+    </script>
+</body>
+</html>

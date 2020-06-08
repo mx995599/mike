@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>城市选择</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#wrap{
+			width: 400px;
+			height: 90px;
+			margin: 100px auto;
+		}
+		select,#wrap div{
+			float: left;
+		}
+		#wrap div{
+			text-align: center;
+			margin: 0 20px;
+		}
+		button{
+			width: 20px;
+			font-size: 12px;
+		}
+		select{
+			width: 100px;
+			height: 90px;
+			text-align: center;
+			background: #d34d65;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<select name="" id="left" multiple="">
+			<option value="">北京市</option>
+			<option value="">上海市</option>
+			<option value="">广州市</option>
+			<option value="">深圳市</option>
+			<option value="">天津市</option>
+		</select>
+		<div>
+			<button>&gt;&gt;</button><br>
+			<button>&lt;&lt;</button><br>
+			<button>&gt;</button><br>
+			<button>&lt;</button>
+		</div>
+		<select name="" id="right" multiple=""></select>
+	</div>
+
+
+	<script type="text/javascript" src="jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		$('button').map(2).click(function(){
+            $('select>option').appendTo($('#right'));
+        });
+	</script>
+</body>
+</html>

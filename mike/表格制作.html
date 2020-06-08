@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微博发布</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		#wrap{
+			width: 300px;
+			margin: 50px auto;
+			border: 1px solid #7d520a;
+			font-size: 14px;
+		}
+		h3{
+			height: 30px;
+			background: #c78d0e;
+			line-height: 30px;
+			text-align: center;
+		}
+		ul{
+			height: 300px;
+			border-top: 1px solid #7d520a;
+			border-bottom: 1px solid #7d520a;
+			list-style: none;
+			padding: 10px;
+			line-height: 2em;
+		}
+		li{
+			border-bottom: 1px dashed #ccc;
+		}
+		textarea{
+			width: 100%;
+			display: block;
+			width: 100%;
+			border: none;
+			outline: none;
+			border-bottom: 1px solid #7d520a;
+			height: 40px;
+			padding: 0 10px;
+		}
+		p{
+			text-align: right;
+			height: 30px;
+			line-height: 30px;
+		}
+		button{
+			width: 50px;
+			height: 25px;
+			border: none;
+			background: #7d520a;
+          
+		}
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            border: 5px dotted;
+            padding: 5px;
+            white-space: nowrap;
+            overflow: scroll;
+        }
+	</style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi doloremque quod praesentium, porro quae ipsam voluptates voluptatem eveniet architecto rem maxime sunt iusto culpa aliquid beatae deserunt minus earum mollitia?
+    </div>
+	<div id="wrap">
+		<h3>微博</h3>
+		<ul></ul>
+		<textarea name="" id="ta" cols="30" rows="10"></textarea>
+		<p>
+			<button id="send">发送</button>
+			<button id="close">关闭</button>
+		</p>
+	</div>
+
+	<script src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        console.log($('.box').outerHeight());
+        
+         i=1;
+         $('ul').css('overflow-x',onscroll);
+		$('#send').click(function(){
+                 if($('li').length>=10){
+                     $('li').first().remove();
+                    $('<li>').appendTo($('ul').text($('#ta').val()));
+                    $('#ta').val('')
+                 }else{
+                    $('<li>').appendTo('ul').text($('#ta').val());
+                $('#ta').val('')
+                 }
+        });
+        $('#close').click(function(){
+            close();
+        });
+	</script>
+</body>
+</html>

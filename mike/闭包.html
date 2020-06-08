@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = 100;
+        function fun(){
+            var num = 200;
+            console.log(window.num);
+            
+        };
+        fun();
+        //                           作用域链：
+        // fun函数scope属性        全局作用于numdizhi，  全局变量num100   
+        //                       局部作用域 numdizhi       局部200
+
+    </script>
+</body>
+</html>

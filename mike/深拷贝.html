@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var arr = [1.5,[50,60,70],true,this,{a:1,b:2},5];
+        // function deepCopy(data){
+        //     var newData = Array.isArray(arr) ? [] : {};
+        //     for(var i in data){
+        //         if(data.hasOwnProperty(i)){
+        //             if(typeof data[i] == 'object'){
+        //                 newData[i] = deepCopy(data[i]);
+        //             }
+        //             else{
+        //             newData[i] = data[i];
+        //             }
+        //         }
+        //     }
+        //     return newData;
+        // };
+        // var res = deepCopy(arr);
+        // console.log(res);
+        
+        var arr = [1, 2, [10, 20, 30], {a:1, b:2, c:3}, true, 'hello', 4, function() {console.log(1111)}];
+
+console.log(arr);
+
+// 定义方法，实现对数据的深拷贝
+function copy(data) {
+    // 判断要拷贝的数据的类型
+    var newData = Array.isArray(arr) ? [] : {};//[10,20,30]
+
+    // 利用for in遍历数组arr
+    for (var i in data) {//[1, 2, [10,20,30]]------
+        if (data.hasOwnProperty(i)) {// 判断i是否为对象的私有属性，如果是私有属性则进行拷贝
+            if (typeof data[i] == 'object') {//判断当前的数据是否为引用类型的数据
+                // 对引用类型的数据单独处理
+                newData[i] = copy(data[i]);//[10,20,30]
+            } else {
+                newData[i] = data[i];
+            }
+        }
+        
+    }
+
+    return newData;
+}
+
+var res = copy(arr);
+
+console.log(res);
+
+    </script>
+</body>
+</html>

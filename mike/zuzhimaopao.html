@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.baidu.com">点击一下</a>
+    <script>
+        
+// 8.创建一个对象myEvent，该对象中封装方法
+// 方法1：求原生JS中事件对象的target属性对应的值
+// 方法2：自定义函数，功能是阻断事件的默认行为
+// 方法3：自定义函数，功能是阻断冒泡
+var a = document.getElementsByTagName('a');
+        var myEnent = {
+            getTargetValue(e){
+                e = e || window.event;
+               return obj = e.target || e.srcElement;
+            },
+            stopmoren(e){
+                e = e || window.event;
+               return e.preventDefault==undefined ? e.preventDefault() : e.returnValue=false;
+            },
+            stopmaopao(e){
+                e = e || window.event;
+               return e.stopPropagation==undefined ? e.cancelBubble=true : e.stopPropagation();
+            }
+        };
+        a.onclick = function(e){
+            e = e || window.event;
+            myEnent.stopmoren(e);
+        };
+    </script>
+</body>
+</html>

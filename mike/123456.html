@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            width: 100px;
+            height: 100px;
+            background-color: chocolate;
+            float: left;
+            border: 2px solid;
+            line-height: 100px;
+            margin-left: 15px;
+        }
+        ul{
+            list-style: none;
+            margin: 50px auto;
+            text-align: center;
+            font-size: 45px;
+            border-collapse: collapse;
+        }
+        .sty{
+            color: cyan;
+            background-color: darkslateblue;
+            border: 2px solid peru;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li><br><br>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script >
+    $('li').mouseover(function(){
+      
+        $(this).addClass('sty');
+        console.log($('li').text());
+    });
+
+    $('li').mouseout(function(){
+        $(this).removeClass('sty');
+    })
+    </script>
+</body>
+</html>

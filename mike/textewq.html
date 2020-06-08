@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sty1{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+        .sty2{
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="btn1">添加</button>
+    <button id="get">删除</button>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script >
+        $('#btn1').click(function(){
+            $('#box').addClass('sty1');
+        });
+        // $('#get').click(function(){
+        //     $('#box').removeClass('sty1');
+        // });
+        $('#get').click(function(){
+            $('#box').toggleClass('sty1');
+        });
+    </script>
+</body>
+</html>

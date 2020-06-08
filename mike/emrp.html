@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1wo shi </li>
+        <li>2wo shi </li>
+        <li>3wo shi </li>
+        <li>4wo shi </li>
+        <li>5wo shi </li>
+        <li>6wo shi </li>
+        <li>7wo shi </li>
+        <li>8wo shi </li>
+        <li id="box">9wo shi </li>
+        <li>10wo shi </li>
+    </ul>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+       $('li').map(function(){
+          var  r = parseInt(Math.random()*256);
+         var   g = parseInt(Math.random()*256);
+         var    b = parseInt(Math.random()*256);
+         var    str = `rgb(${r},${b},${g})`;
+            $(this).css('backgroundColor',str);
+       });
+       console.log($('li').size());
+       console.log($('li').get(0));
+       console.log($('li').index($('#box')));
+       
+       
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <script>
+//         4.创建一个汽车对象（属性：品牌、价格、时速，方法：跑一定距离所花时间）
+var car = {
+    brand:'奥迪',
+    price:400000,
+    speed:50,
+    timeCast(){
+        console.log('shijian');
+        
+    }
+};
+// 5.创建一个对象，代表平面中的一个点，自定义它的属性
+// 功能1：求这个点距离圆点的距离
+// 功能2：求两个点间的距离
+var circle = {
+    x:3,
+    y:4,
+    far(obj){
+        return Math.sqrt(Math.pow(this.x,2)+Math.pow(this.y,2))
+    }
+};
+var point2 = {
+    x:6,
+    y:8
+};
+console.log(circle.far(point2));
+
+// 6.创建一个对象，代表一个圆柱体，自定义它的属性
+// 方法1：求底面周长
+// 方法2：求底面积
+// 方法3：求圆柱体的体积
+var obj = {
+    r:15,
+    h:6,
+    round(){
+        return Math.PI*this.r*2;
+    },
+    s(){
+        return Math.pow(Math.PI*this.r,2);
+    },
+    v(){
+        return this.s*this.h;
+    }
+};
+console.log(obj.s());
+
+// 7.创建一个对象tools，该对象中封装方法
+// 方法1：求n-m的随机整数，包含n和m
+// 方法2：生成随机颜色
+var div = document.getElementsByTagName('div')[0];
+var tools = {
+    si(n,m){
+       return parseInt(Math.random()*(m+1-n)+n);
+    },
+    col(){
+       return ('rgb'+'('+parseInt(Math.random()*256)+','+parseInt(Math.random()*256)+','+parseInt(Math.random()*256)+')');
+    }
+
+};
+div.style.backgroundColor = tools.col();
+console.log(tools.si(15,25));
+
+    </script>
+</body>
+</html>

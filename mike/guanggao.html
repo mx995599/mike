@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 50px;
+            height: 200px;
+            background-color: chartreuse;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        var div = document.getElementsByClassName('box')[0];
+        var t =  $(document).innerHeight();
+        move();
+        function move(){
+
+            $('.box')
+                .animate({
+                top:t-200
+             },1000)
+                .animate({
+                top:0
+             },1000,function(){
+                move();
+             });
+        }
+      
+    </script>
+</body>
+</html>

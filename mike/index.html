@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var liHaiBo = {
+        //     name:'liHaiBo',
+        //     age:38,
+        //     tall:138,
+        //     teach:function () {
+        //         console.log('你懂个锤子');
+                
+        //     },
+        //     shot:function(){
+        //         console.log('汪汪汪');
+                
+        //     }
+        // };
+        // console.log(liHaiBo.shot());
+//         1.创建对象描述如下事物，电脑（属性：品牌、价格，方法：打游戏、学习），冰箱（属性：品牌、价格、宽度、高度，方法：开门、关门、冷冻）
+            var computer = {
+                brand:'华硕',
+                price:4999,
+                play: function () {
+                    console.log('游戏');
+                    
+                },
+                study:function () {
+                    console.log('java');
+                    
+                }
+            };
+            var ref = {
+                brand:'haier',
+                price:5555,
+                width:150,
+                height:200,
+                open:function () {
+                    console.log(open);
+                    
+                },
+                close:function () {
+                    console.log('close');
+                    
+                },
+                cold:function(){
+                    console.log('dong');
+                    
+                }
+            };
+// 2.创建对象描述小明同学（属性：小明、年龄、学校、班级、姐妹:小雪和小莉，方法：吃、玩）
+var xiaoming = {
+     'na' :[999],
+    name:'小明',
+    age:15,
+    'school':'qinghua',
+    'class':'软件4班',
+    sister:'小雪和小莉',
+    eat:function(){
+        console.log('meal');
+        
+    },
+    play:function(){
+        console.log('pat');
+        
+    }
+};
+    delete xiaoming.age;
+    xiaoming.laop = 'wo'
+    xiaoming.school = 'afasf'
+
+    with(xiaoming){
+        name = 'baoma'
+    }
+    console.log(Object.keys(xiaoming));
+    console.log(Object.values(xiaoming));
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap">
+        <div id="box" style="width: 200px;height: 200px; background-color: aquamarine;"></div>
+    </div>
+        <script src="js/jquery-1.12.4.js"></script>
+        <script>
+            $('#box').click(function(){
+console.log('llll');
+
+            });
+            $('#box').bind('click',function(e){
+                e.stopPropagation();
+                console.log(e.isPropagationStopped());
+    
+                console.log();
+                ;
+                console.log(2222);
+                
+            });
+            $('#box').bind('mouseout mouseenter',function(){
+console.log('mouse');
+
+            });
+            $('#box').bind({
+                mouseenter:function(){
+console.log(444);
+
+                },
+                mouseout(){
+                    console.log(333);
+                    
+                }
+            })
+            
+        </script>
+</body>
+</html>

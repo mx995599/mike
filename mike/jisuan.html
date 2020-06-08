@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 计算字符串中出现次数最多的字符，以及出现次数
+        var str = 'abcbabbababababbaasdf';
+        var count = 0;
+        var i,char='',obj = {};
+        for(i = 0; i < str.length; i ++){
+           if(!obj[str[i]]){
+               obj[str[i]] = 1;
+           }
+           else{
+               obj[i] +=1;
+           }
+        }
+      for(var j in obj){
+        if(obj[i]>count){
+            count = obj[i];
+            char = i;
+        }
+      }
+        alert(count,char)
+    </script>
+</body>
+</html>
