@@ -1,8 +1,8 @@
 /*!
  * jQuery JavaScript Library v1.12.4
  * http://jquery.com/
- *
- * Includes Sizzle.js
+ 
+ * Includes Sizzle.j
  * http://sizzlejs.com/
  *
  * Copyright jQuery Foundation and other contributors
