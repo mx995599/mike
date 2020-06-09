@@ -1,0 +1,10 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, input, textarea, button, p, blockquote, th, td{margin: 0;padding: 0;}
+body{text-align: center;
+    font-family:'����';}
+ul,ol,li{ list-style: none;
+float: left;
+}
+a{text-decoration: none;
+margin: 0;
+    padding: 0;}
+input,button,img{border: none;vertical-align: middle;}
